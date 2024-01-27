@@ -1,0 +1,24 @@
+基于检测后的多目标跟踪评估代码
+
+环境安装---使用conda安装
+conda env create -f environment.yml
+activate motmetrics-env
+pip install .
+pytest
+
+
+cwx_videos文件夹存放的是gt.txt和track.txt(mot1、mot2.txt等等)； 文件夹的布置必须和cwx_videos文件夹里面的一致；
+不一致在代码motmetrics/apps/eval_motchallenge.py中修改即可；主要确保能够读取到gt.txt和track.txt即可
+---track.txt是经过跟踪得到的文本文件
+---gt.txt是经过darklabel标注后再经过脚本转换后的文件
+
+
+
+运行命令---针对多个视频序列同时评估：
+python motmetrics/apps/eval_motchallenge.py cwx_videos cwx_videos 
+cwx_videos是存放gt.txt的根目录
+cwx_videos也是存放track.txt(mot1、mot2.txt等等)的根目录
+
+
+运行命令2---针对单个视频序列评估：
+python motmetrics/apps/custom_eval.py即可 代码里面写好了gt.txt和track.txt的存放地址； 可以根据需求修改
