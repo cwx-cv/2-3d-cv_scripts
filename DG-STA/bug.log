@@ -1,0 +1,88 @@
+nohup: 忽略输入
+Traceback (most recent call last):
+  File "/home/mfan/桌面/DG-STA/main.py", line 12, in <module>
+    from optim_factory import create_optimizer ######
+  File "/home/mfan/桌面/DG-STA/optim_factory.py", line 12, in <module>
+    from timm.optim.adafactor import Adafactor
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/__init__.py", line 2, in <module>
+    from .models import create_model, list_models, is_model, list_modules, model_entrypoint, \
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/models/__init__.py", line 1, in <module>
+    from .beit import *
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/models/beit.py", line 49, in <module>
+    from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/data/__init__.py", line 5, in <module>
+    from .dataset import ImageDataset, IterableImageDataset, AugMixDataset
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/data/dataset.py", line 12, in <module>
+    from .parsers import create_parser
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/data/parsers/__init__.py", line 1, in <module>
+    from .parser_factory import create_parser
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/data/parsers/parser_factory.py", line 3, in <module>
+    from .parser_image_folder import ParserImageFolder
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/data/parsers/parser_image_folder.py", line 11, in <module>
+    from timm.utils.misc import natural_key
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/utils/__init__.py", line 4, in <module>
+    from .cuda import ApexScaler, NativeScaler
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/timm/utils/cuda.py", line 8, in <module>
+    from apex import amp
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 664, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 627, in _load_backward_compatible
+  File "<frozen zipimport>", line 259, in load_module
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/apex-0.1-py3.9.egg/apex/__init__.py", line 27, in <module>
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 664, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 627, in _load_backward_compatible
+  File "<frozen zipimport>", line 259, in load_module
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/apex-0.1-py3.9.egg/apex/transformer/__init__.py", line 4, in <module>
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 664, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 627, in _load_backward_compatible
+  File "<frozen zipimport>", line 259, in load_module
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/apex-0.1-py3.9.egg/apex/transformer/pipeline_parallel/__init__.py", line 1, in <module>
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 664, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 627, in _load_backward_compatible
+  File "<frozen zipimport>", line 259, in load_module
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/apex-0.1-py3.9.egg/apex/transformer/pipeline_parallel/schedules/__init__.py", line 3, in <module>
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 664, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 627, in _load_backward_compatible
+  File "<frozen zipimport>", line 259, in load_module
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/apex-0.1-py3.9.egg/apex/transformer/pipeline_parallel/schedules/fwd_bwd_no_pipelining.py", line 10, in <module>
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 664, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 627, in _load_backward_compatible
+  File "<frozen zipimport>", line 259, in load_module
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/apex-0.1-py3.9.egg/apex/transformer/pipeline_parallel/schedules/common.py", line 9, in <module>
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 664, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 627, in _load_backward_compatible
+  File "<frozen zipimport>", line 259, in load_module
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/apex-0.1-py3.9.egg/apex/transformer/pipeline_parallel/p2p_communication.py", line 25, in <module>
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 664, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 627, in _load_backward_compatible
+  File "<frozen zipimport>", line 259, in load_module
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/apex-0.1-py3.9.egg/apex/transformer/utils.py", line 11, in <module>
+AttributeError: module 'torch.distributed' has no attribute '_all_gather_base'
+Traceback (most recent call last):
+  File "/home/mfan/anaconda3/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/mfan/anaconda3/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/torch/distributed/launch.py", line 340, in <module>
+    main()
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/torch/distributed/launch.py", line 326, in main
+    sigkill_handler(signal.SIGTERM, None)  # not coming back
+  File "/home/mfan/anaconda3/lib/python3.9/site-packages/torch/distributed/launch.py", line 301, in sigkill_handler
+    raise subprocess.CalledProcessError(returncode=last_return_code, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/mfan/anaconda3/bin/python', '-u', 'main.py', '--local_rank=0', '--batch_size=200', '--epochs=400', '--lr=1e-4', '--opt=adam', '--num_workers=8', '--log_dir=./distributed_log/train_distributed_main_new6', '--warmup_epochs=20']' returned non-zero exit status 1.
+Killing subprocess 501411

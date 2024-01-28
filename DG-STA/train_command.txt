@@ -1,0 +1,33 @@
+nohup bash train_distributed_main.sh  > train_distributed_main.log 2>&1 &
+
+nohup bash train_distributed_main.sh  > train_distributed_main_2.log 2>&1 &
+
+nohup bash train_distributed_main.sh  > train_distributed_main_6.log 2>&1 &
+
+
+
+
+
+
+# 采用分布式训练的命令---Windows系统
+# 需要在main.py中的torch.nn.parallel.DistributedDataParallel前添加下面这行代码
+torch.distributed.init_process_group('gloo', init_method='env://', world_size=1, rank=0)
+
+python -m torch.distributed.launch --nproc_per_node=1 --master_port 29501 main.py --batch_size 200 --epochs 400 --opt adam --lr 1e-4 --num_workers 8 --log_dir ./distributed_log/train_distributed_main_new_6 --warmup_epochs 20
+
+# 采用分布式训练的命令---Ubuntu系统(使用nohup命令保存训练过程中的日志---方便后续调试)
+nohup bash train_distributed_main.sh  > train_distributed_main_9.log 2>&1 &
+
+# 采用分布式训练出现的bug---Ubuntu系统：见根目录下的bug.log.txt
+# 解决方案：重新安装apex包---参考博客：https://blog.csdn.net/zjc910997316/article/details/131038875
+
+
+
+# 产生随机颜色
+
+import numpy as np
+color = list(np.random.choice(range(256), size=3))
+print(color)
+
+
+

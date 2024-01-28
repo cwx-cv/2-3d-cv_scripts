@@ -1,0 +1,7 @@
+start_frame= 57
+end_frame= 587
+a_id= 2
+b_id= 8
+action= 425
+width= 1920
+height= 1080
