@@ -1,0 +1,26 @@
+1.如何在yolov5,yolov7中输出small,middle,large的精度指标(COCO指标)
+先用脚本yolo2coco.py将多个xxx.txt文件转换为一个xxx.json文件
+再将val.py中的save-json设置为True,同时安装pycocotools包,同时将路径anno_json更换为自己要测试的即可
+
+2.yolov7中添加Deformable Conv V2\V3\SAConv2d\DSConv2d---一样道理；注意V3可能需要编译
+首先将可变性卷积的代码复制到common.py中
+接着在yolo.py的parse_model函数中添加DCNv2
+最后在网络的配置文件中将Conv（kernel=3）变成DCNv2即可
+
+3.yolov7中添加BiFormer注意力机制或NWD损失函数---针对小目标
+首先将注意力机制的源码单独创建一个xxx.py文件放到models文件夹下
+然后在common.py文件中导入注意力机制并将其嵌套到对应的模块中---这里选择新建一个模块而不是覆盖原来的模块
+接着将嵌套的模块放到yolo.py的parse_model函数中
+最后在配置文件中添加嵌套的模块即可
+
+4.yolov7中添加注意力机制---带通道数/不带通道数
+带通道数
+将注意力机制的源码单独创建一个xxx.py文件放到models文件夹下
+然后在common.py文件中导入注意力机制并将其嵌套到对应的模块中
+接着将嵌套的模块放到yolo.py的parse_model函数中
+最后在配置文件中添加嵌套的模块即可
+
+不带通道数
+同上......
+
+加入的模块一般有三种：Conv\Concat\SPPCSPC中
